@@ -1,38 +1,10 @@
 main: me.tianlang.plugin.langclickcommand.Main
 
 name: LangClickCommand
-version: 1.0.0
-api-version: Bukkitversion
-author: TianLang
-description: This is a simple Bukkit Plugin
-
-#前置 
-depend: []
-softdepend: []
-loadbefore: []
-
-#可选
-#Has two possible values: STARTUP and POSTWORLD.
-load: POSTWORLD
-website: www.spigotmc.org
-prefix: Testing
+version: 1.1.0
+api-version: 1.12.2
+author: [TianLang, msg_dw]
 
 #命令
 commands:
-  Hello:
-    description: Shows a hello message to the player
-    aliases: []
-    usage: "Usage: /<command> [test|stop]"
-    permission: hello.use
-    permission-message: You not have have permission to use this command.
-
-#权限
-permissions:
-  hello.use:
-    description: Allows you to use the command /test
-    default: true	#true false op not op
-  hello.*:
-    description: Allows you to use the command /test
-    default: true	#true false op not op
-    children:
-      hello.use: false
+  lcc:
