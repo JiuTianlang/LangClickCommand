@@ -1,0 +1,42 @@
+exmple1:
+  type: STONE #物品英文名
+  lore: '右键切换飞行模式' #检测的lore
+  clickways: #点击类型有 right_click_air left_click_air right_click_block left_click_block 
+  - right_click_air
+  - right_click_block
+  cooldown: 0 #冷却时间 单位是tick 每20tick = 1秒 (暂时无法使用)
+  required:
+    enable: true #消耗开启
+    amount: 1 #消耗数量
+  needlevel: 10 #需要等级
+  needpermission: CLICK.FLY #需要权限
+  message: #提示信息
+    nocooldown: "冷却未完成: x秒"
+    noamount: "没有足够的数量: 1个"
+    nolevel: "等级未达到: 10级"
+    nopermission: "没有权限: ..."
+    afteruse: "使用成功"
+  cmd: #指令列表(控制台指令) 格式为 几率:指令 fly指令几率为 100/(100+10+1)
+  - '100:fly %player%'
+  - '10:cs'
+  - '1:cs1'
+exmple2:
+  type: GRASS #物品英文名
+  lore: '左键摸人屁股' #检测的lore
+  clickways: #点击类型有 right_click_air left_click_air right_click_block left_click_block 
+  - left_click_air
+  - left_click_block
+  cooldown: 0 #冷却时间 单位是tick 每20tick = 1秒 (暂时无法使用)
+  required:
+    enable: false #消耗开启
+    amount: 1 #消耗数量
+  needlevel: 0 #需要等级
+  needpermission: CLICK.MOPIGU #需要权限
+  message: #提示信息
+    nocooldown: "冷却未完成: x秒"
+    noamount: "没有足够的数量: 1个"
+    nolevel: "等级未达到: 10级"
+    nopermission: "没有权限: ..."
+    afteruse: "使用成功"
+  cmd: #指令列表(控制台指令) 格式为 几率:指令 mopigu指令几率为 100/100
+  - '100:mopigu %player%'
